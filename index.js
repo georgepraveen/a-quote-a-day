@@ -4,7 +4,9 @@ app.get('/',function(req,res){
     res.sendFile(__dirname+'/index.html');
 });
 
-var port = process.env.port||8080;
-var server = app.listen(port,function(req,res){
-    console.log("App listening at port"+port);
+var port = process.env.PORT || 8080;
+
+app.listen(port, function(){
+    console.log("App listening at port "+port);
 });
+
